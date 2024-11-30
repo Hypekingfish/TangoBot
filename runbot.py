@@ -17,7 +17,13 @@ def parse_args() -> argparse.Namespace:
 
 def get_token() -> str:
     load_dotenv()
-    return os.getenv('DISCORD_TOKEN')
+    token = os.getenv('DISCORD_TOKEN')
+    if token is None:
+        raise ValueError(
+            "DISCORD_TOKEN environment variable is not set. "
+            "Please create a .env file with your Discord token or set the environment variable."
+        )
+    return token
 
 
 if __name__ == '__main__':
