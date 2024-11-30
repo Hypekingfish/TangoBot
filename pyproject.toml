@@ -1,0 +1,35 @@
+[project]
+name = "MtTaquoma"
+version = "0.1"
+description = "Rainier Guard Discord Bot."
+readme = "README.md"
+requires-python = "==3.11"
+
+authors = [
+  {name = "Ellie", email = "rainierguard@gmail.com" },
+  {name = "Pranav", email = "rainierguard@gmail.com" }
+]
+maintainers = [
+  {name = "Ellie", email = "rainierguard@gmail.com" },
+  {name = "Pranav", email = "rainierguard@gmail.com" }
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+# select = []
+ignore = []
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.pylint]
+max-args = 6
